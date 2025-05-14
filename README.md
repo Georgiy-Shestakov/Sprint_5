@@ -13,19 +13,16 @@
 
  ### **locators.py**
  Здесь лежат локаторы элементов страницы 
- 
- 1) UrlLocators
 
- _URL страниц_
- 2) ButtonsPageLocators
+ 1) ButtonsPageLocators
 
  _Локаторы кнопок_
- 3) FieldsPageLocators
+ 2) FieldsPageLocators
 
  _Локаторы полей_
- 4) OtherPageLocators
+ 3) OtherPageLocators
  
- _Локаторы прочих элементов и переменные для них_
+ _Локаторы прочих элементов_
 
  ### **tests_registration.py**
  _Тесты на регистрацию нового пользователя_
@@ -39,4 +36,9 @@
  ### **tests_post_ad.py**
  _Тесты на создание объявлений_
 
+### **data.py**
+_Тестовые переменные_
+
+### **links.py**
+_URL для тестов_
 
