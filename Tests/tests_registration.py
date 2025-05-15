@@ -1,11 +1,12 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from locators import ButtonsPageLocators, FieldsPageLocators, OtherPageLocators, UrlLocators
+from locators import ButtonsPageLocators, FieldsPageLocators, OtherPageLocators
+from links import UrlLocators
 
 import random
 
-class Test_registration:
+class TestRegistration:
     # Тест 1 (Регистрация пользователя)
     def test_new_user_registration(self, driver):
         driver.get(UrlLocators.URL_MAIN)

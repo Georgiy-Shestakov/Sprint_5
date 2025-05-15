@@ -1,9 +1,9 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from locators import ButtonsPageLocators, FieldsPageLocators, OtherPageLocators, UrlLocators
+from locators import ButtonsPageLocators, FieldsPageLocators, OtherPageLocators
 
-class Test_logout:
+class TestLogout:
     # Тест 5 (Logout пользователя)
     def test_logout(self, authorised_driver):
         authorised_driver.find_element(*ButtonsPageLocators.BTN_EXIT).click()

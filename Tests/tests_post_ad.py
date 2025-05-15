@@ -1,11 +1,12 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from locators import ButtonsPageLocators, FieldsPageLocators, OtherPageLocators, UrlLocators
+from locators import ButtonsPageLocators, FieldsPageLocators, OtherPageLocators
+from links import UrlLocators
 
 import random
 
-class Test_post_ad:
+class TestPostAd:
     # Тест 6 (Создание объявления неавторизованным пользователем)
     def test_post_ad_unauthorised_user(self, driver):
         driver.get(UrlLocators.URL_MAIN)
@@ -26,6 +27,7 @@ class Test_post_ad:
         authorised_driver.find_element(*FieldsPageLocators.FLD_DESCRIPTION).send_keys("Какое-то описание")
         authorised_driver.find_element(*FieldsPageLocators.FLD_PRICE).send_keys(random.randint(1, 10000000))
 
+        # WebDriverWait(authorised_driver, 5).until(expected_conditions.visibility_of_element_located((OtherPageLocators.OTHR_CATEGORY_DROPDOWN)))
         authorised_driver.find_element(*OtherPageLocators.OTHR_CATEGORY_DROPDOWN).click()
         authorised_driver.find_element(*OtherPageLocators.OTHR_CATEGORY_DROPDOWN_VARIABLES).click()
 
